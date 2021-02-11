@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
 use App\User;
 use App\Photo;
@@ -18,7 +19,7 @@ class UserPhotosSeeder extends Seeder
         User::updateOrCreate(['email' => $email],
         [
             "name" => "Nick Reynolds",
-            "password" => "1234",
+            "password" => Hash::make('password'),
             "phone" => "555-555-5555",
             "email" => "nick.reynolds@domain.com",
             "bio" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
@@ -30,7 +31,7 @@ class UserPhotosSeeder extends Seeder
 
         Photo::updateOrCreate(['id' => 1],
         [
-            'id' => 2,
+            'id' => 1,
             "title" => "Nandhaka Pieris",
             "description" => "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
             "img" => "img/landscape1.jpg",
