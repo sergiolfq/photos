@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-10">
-            <example-component :id=1></example-component>
+            <profile-component :id=1></profile-component>
         </div>
     </div>
 </div>

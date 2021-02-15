@@ -17,7 +17,7 @@
                     You are logged in!
                 </div>
             </div>
-            <example-component></example-component>
+            <profile-component></profile-component>
         </div>
     </div>
 </div>
