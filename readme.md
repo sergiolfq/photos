@@ -1,4 +1,6 @@
 <p align="center">Photo Test</p>
+![Photo Image ](read/image.PNG)
+![Photo Image ](read/image2.PNG)
 
 ## Tools used
 To make this project I used the following tools 
@@ -43,6 +45,9 @@ I made a litle trick when an image is clicked it launches a bootstrap modal and 
 
 ## Others thoughts 
 I think this porject is really cool and has endless way to be improved. I thought of adding arrows and displaying other images in the modal, I tried to achieved that but was short on time. I also considered adding a different layout in which the images were wider one next to the other if the had different sizes it could be a Masonry layout etc.
+
+
+
 
 ## Settings
 
