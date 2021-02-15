@@ -10949,3 +10949,84 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.card-title {
+  position: absolute;
+  top: 6.9rem;
+  color: white;
+  left: 1rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.bi-heart-fill {
+  color: red;
+}
+
+.pink-text {
+  font-size: 0.7rem;
+  color: red;
+}
+
+.light-text {
+  color: lightgrey;
+}
+
+.subtitle {
+  font-size: 0.5rem;
+  color: grey;
+}
+
+.name {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #A9A9A9;
+}
+
+.bg-white {
+  background-color: white;
+  border-radius: 5px;
+}
+
+.profile-name {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.bio {
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+#app {
+  background: #eed1ae;
+  background: radial-gradient(circle, #eed1ae 72%, #5c7b9f 100%);
+}
+
+.album-section .card-img-top {
+  height: 9.5rem;
+}
+
+.album-section .card {
+  border: none;
+}
+
+.contact-col {
+  line-height: 0.5rem;
+}
+
+.avatar {
+  max-height: 9rem;
+}
+
+.limit-text {
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+

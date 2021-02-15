@@ -1741,6 +1741,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 function newProfile() {
   return {
     name: '',
@@ -37404,90 +37410,106 @@ var render = function() {
   return _c("div", { staticClass: "container" }, [
     _c("div", { staticClass: "row justify-content-center" }, [
       _c("div", { staticClass: "col-md-12" }, [
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-2" }, [
-            _c("img", { attrs: { src: "/storage/folder/profile.png" } })
+        _c("div", { staticClass: "row bg-white pt-1" }, [
+          _c("div", { staticClass: "col col-md-3" }, [
+            _c("div", { staticClass: " mt-2 center" }, [
+              _c("img", {
+                staticClass: "img-fluid  ml-3 rounded-circle avatar",
+                attrs: { src: "storage/" + _vm.profile.profile_picture }
+              })
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-7" }, [
-            _c("h2", [_vm._v(_vm._s(_vm.profile.name))]),
-            _vm._v(" "),
-            _c("h4", [_vm._v("Bio")]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.profile.bio))])
+          _c("div", { staticClass: "col-md-6 " }, [
+            _c("div", { staticClass: "mt-3" }, [
+              _c("h2", { staticClass: "profile-name" }, [
+                _vm._v(_vm._s(_vm.profile.name))
+              ]),
+              _vm._v(" "),
+              _c("label", { staticClass: "bio bold" }, [_vm._v("Bio")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "bio limit-text" }, [
+                _vm._v(_vm._s(_vm.profile.bio))
+              ])
+            ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-3" }, [
-            _c("label", [_vm._v("Phone")]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.profile.phone))]),
-            _vm._v(" "),
-            _c("label", [_vm._v("Email")]),
-            _vm._v(" "),
-            _c("p", [_vm._v(_vm._s(_vm.profile.email))])
+          _c("div", { staticClass: "col-md-2 mt-2 contact-col" }, [
+            _c("div", { staticClass: "mt-5" }, [
+              _c("label", { staticClass: "bio bold" }, [_vm._v("Phone")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "pink-text" }, [
+                _vm._v(_vm._s(_vm.profile.phone))
+              ]),
+              _vm._v(" "),
+              _c("label", { staticClass: "bio bold" }, [_vm._v("Email")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "pink-text" }, [
+                _vm._v(_vm._s(_vm.profile.email))
+              ])
+            ])
           ])
         ]),
         _vm._v(" "),
         _c(
           "div",
-          { staticClass: "row", staticStyle: {} },
+          {
+            staticClass: "row album-section",
+            staticStyle: { "margin-top": "1rem" }
+          },
           _vm._l(_vm.profile.album, function(item) {
             return _c("div", { key: item.id, staticClass: "col-md-4" }, [
-              _c(
-                "div",
-                { staticClass: "card", staticStyle: { margin: "1rem" } },
-                [
-                  _c("label", { staticClass: "card-title" }, [
-                    _vm._v(" " + _vm._s(item.title) + " ")
+              _c("div", { staticClass: "card mt-2" }, [
+                _c("label", { staticClass: "card-title" }, [
+                  _vm._v(" " + _vm._s(item.title) + " ")
+                ]),
+                _vm._v(" "),
+                _c("img", {
+                  staticClass: "card-img-top",
+                  attrs: { src: "storage/" + item.img }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("p", { staticClass: "card-text limit-text" }, [
+                    _vm._v(" " + _vm._s(item.description) + " ")
                   ]),
                   _vm._v(" "),
-                  _c("img", {
-                    staticClass: "card-img-top",
-                    attrs: { src: "storage/" + item.img }
-                  }),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "card-body" }, [
-                    _c("p", { staticClass: "card-text" }, [
-                      _vm._v(" " + _vm._s(item.description) + " ")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "svg",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: item.featured,
-                            expression: "item.featured"
-                          }
-                        ],
-                        staticClass: "bi bi-heart-fill",
-                        attrs: {
-                          xmlns: "http://www.w3.org/2000/svg",
-                          width: "16",
-                          height: "16",
-                          fill: "currentColor",
-                          viewBox: "0 0 16 16"
+                  _c(
+                    "svg",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: item.featured,
+                          expression: "item.featured"
                         }
-                      },
-                      [
-                        _c("path", {
-                          attrs: {
-                            "fill-rule": "evenodd",
-                            d:
-                              "M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
-                          }
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("span", { staticClass: "float-right" }, [
-                      _vm._v(" " + _vm._s(item.date) + " ")
-                    ])
+                      ],
+                      staticClass: "bi bi-heart-fill",
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        width: "16",
+                        height: "16",
+                        fill: "currentColor",
+                        viewBox: "0 0 16 16"
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "fill-rule": "evenodd",
+                          d:
+                            "M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"
+                        }
+                      })
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "float-right bio" }, [
+                    _vm._v(" " + _vm._s(item.date) + " ")
                   ])
-                ]
-              )
+                ])
+              ])
             ])
           }),
           0
