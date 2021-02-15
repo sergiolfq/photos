@@ -34,7 +34,7 @@ Second, I polished the styles to make it as similar to the wirefrime as I could 
 
 Third, once I had my page looking good and with the requested data from the backedn then I started working on decoupling it into components. I created two more components that could be reusable in the future. One for the bio information ( avat, name , description, phone etc) and other for the cards to display the image, date, description etc.
 
-these components get props from the parent components (profile component) and thats how they display the information. 
+these components get props from the parent components (profile component) and thats how they display the information. the main component receives form a prop the id of the used to display. right now it uses id 1 but that could change in the future. 
 
 
 ## Extra
