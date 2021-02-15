@@ -44,4 +44,26 @@ I made a litle trick when an image is clicked it launches a bootstrap modal and 
 ## Others thoughts 
 I think this porject is really cool and has endless way to be improved. I thought of adding arrows and displaying other images in the modal, I tried to achieved that but was short on time. I also considered adding a different layout in which the images were wider one next to the other if the had different sizes it could be a Masonry layout etc.
 
+## Settings
+
+clone repo. 
+
+access client folder y execute  `npm install`. once finish run  `npm watch`  
+
+
+on main folder run 
+`composer install`. 
+`cp .env.example .env`.  set your environment variables 
+`php artisan key:generate`
+`php artisan migrate `
+
+`php artisan db:seed `
+
+then start serving  `php artisan serve` 
+
+Go to http://127.0.0.1:8000/
+
+
+
+
 
