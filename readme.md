@@ -34,7 +34,7 @@ Second, I polished the styles to make it as similar to the wirefrime as I could 
 
 Third, once I had my page looking good and with the requested data from the backedn then I started working on decoupling it into components. I created two more components that could be reusable in the future. One for the bio information ( avat, name , description, phone etc) and other for the cards to display the image, date, description etc.
 
-these components get props from the parent components (profile component) and thats how they display the information. 
+these components get props from the parent components (profile component) and thats how they display the information. the main component receives form a prop the id of the used to display. right now it uses id 1 but that could change in the future. 
 
 
 ## Extra
@@ -43,5 +43,27 @@ I made a litle trick when an image is clicked it launches a bootstrap modal and 
 
 ## Others thoughts 
 I think this porject is really cool and has endless way to be improved. I thought of adding arrows and displaying other images in the modal, I tried to achieved that but was short on time. I also considered adding a different layout in which the images were wider one next to the other if the had different sizes it could be a Masonry layout etc.
+
+## Settings
+
+clone repo. 
+
+access client folder y execute  `npm install`. once finish run  `npm watch`  
+
+
+on main folder run 
+`composer install`. 
+`cp .env.example .env`.  set your environment variables 
+`php artisan key:generate`
+`php artisan migrate `
+
+`php artisan db:seed `
+
+then start serving  `php artisan serve` 
+
+Go to http://127.0.0.1:8000/
+
+
+
 
 
