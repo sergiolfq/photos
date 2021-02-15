@@ -1,7 +1,7 @@
 <template>
     <div class="card mt-2" >
         <label class="card-title"> {{ item.title }} </label>
-        <img class="card-img-top" :src="`storage/${item.img}`" >
+        <img data-toggle="modal" data-target="#exampleModalCenter"  v-on:click="openModal(`storage/${item.img}`)" class="card-img-top" :src="`storage/${item.img}`" >
         <div class="card-body">
             <p class="card-text limit-text"> {{ item.description }} </p>
             <svg v-show="item.featured" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
@@ -14,6 +14,11 @@
 
 <script>
 export default {
-    props: ['item']
+    props: ['item'],
+    methods: {
+        openModal: function(src){
+                document.querySelector("#modal-content").setAttribute('src',src);
+        }
+    }
 }
 </script>

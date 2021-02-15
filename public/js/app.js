@@ -1752,7 +1752,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['item']
+  props: ['item'],
+  methods: {
+    openModal: function openModal(src) {
+      document.querySelector("#modal-content").setAttribute('src', src);
+    }
+  }
 });
 
 /***/ }),
@@ -37523,7 +37528,16 @@ var render = function() {
     _vm._v(" "),
     _c("img", {
       staticClass: "card-img-top",
-      attrs: { src: "storage/" + _vm.item.img }
+      attrs: {
+        "data-toggle": "modal",
+        "data-target": "#exampleModalCenter",
+        src: "storage/" + _vm.item.img
+      },
+      on: {
+        click: function($event) {
+          return _vm.openModal("storage/" + _vm.item.img)
+        }
+      }
     }),
     _vm._v(" "),
     _c("div", { staticClass: "card-body" }, [
